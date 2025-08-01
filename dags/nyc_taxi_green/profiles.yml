@@ -6,9 +6,9 @@ nyc_taxi_green:
     fabric-dev:
       type: fabric
       driver: "ODBC Driver 18 for SQL Server"
-      server: " {{ env_var('FABRIC_WAREHOUSE_CONNECTION') }}"
+      server: "{{ env_var('FABRIC_WAREHOUSE_CONNECTION') }}"
       port: 1433
-      database: "nyc_taxi_sample"
+      database: "taxi"
       schema: dbo
       threads: 4
       authentication: ServicePrincipal
