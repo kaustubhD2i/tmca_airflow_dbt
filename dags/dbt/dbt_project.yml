@@ -20,5 +20,5 @@ clean-targets:
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 models:
-  GEOGRAPHY_VW:
+  tmca_d2i_poc:
     materialized: view
