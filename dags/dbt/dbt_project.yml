@@ -1,9 +1,9 @@
-name: "nyc_taxi_green"
+name: "tmca_d2i_poc"
 
 config-version: 2
 version: "0.1"
 
-profile: "nyc_taxi_green"
+profile: "tmca_d2i_poc"
 
 model-paths: ["models"]
 seed-paths: ["seeds"]

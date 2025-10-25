@@ -1,15 +1,28 @@
 config:
   partial_parse: true
-nyc_taxi_green:
+tmca_d2i_poc:
   target: fabric-dev
   outputs:
-    fabric-dev:
+    fabric-bronze:
       type: fabric
       driver: "ODBC Driver 18 for SQL Server"
       server: "{{ env_var('FABRIC_WAREHOUSE_CONNECTION') }}"
       port: 1433
-      database: "taxi"
-      schema: dbo
+      database: "WH_TMCA_AIRFLOW_DBT_POC"
+      schema: BRONZE
+      threads: 4
+      authentication: ServicePrincipal
+      tenant_id: "{{ env_var('AZURE_TENANT_ID') }}"
+      client_id: "{{ env_var('AZURE_CLIENT_ID') }}"
+      client_secret: "{{ env_var('AZURE_CLIENT_SECRET') }}"
+
+    fabric-silver:
+      type: fabric
+      driver: "ODBC Driver 18 for SQL Server"
+      server: "{{ env_var('FABRIC_WAREHOUSE_CONNECTION') }}"
+      port: 1433
+      database: "WH_TMCA_AIRFLOW_DBT_POC"
+      schema: SILVER
       threads: 4
       authentication: ServicePrincipal
       tenant_id: "{{ env_var('AZURE_TENANT_ID') }}"
