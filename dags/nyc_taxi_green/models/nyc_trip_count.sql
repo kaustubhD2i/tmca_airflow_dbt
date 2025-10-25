@@ -1,16 +1,9 @@
-with new_york_taxis as (
-       select * from nyctlc
-   ),
+with 
    final as (
      SELECT
-       vendorID,
-       CAST(lpepPickupDatetime AS DATE) AS trip_date,
-       COUNT(*) AS trip_count
+       *
      FROM
-         [taxi].[dbo].[nyctlc]
-     GROUP BY
-         vendorID,
-         CAST(lpepPickupDatetime AS DATE)
+         [WH_TMCA_AIRFLOW_DBT_POC].[dbo].[Geography]
    
    )
    select * from final
