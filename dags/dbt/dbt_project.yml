@@ -20,5 +20,5 @@ clean-targets:
 require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 models:
-  nyc_taxi_green:
-    materialized: table
+  GEOGRAPHY_VW:
+    materialized: view
