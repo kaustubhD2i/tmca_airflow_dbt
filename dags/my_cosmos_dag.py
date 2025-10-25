@@ -17,7 +17,7 @@ dbt_fabric_dag = DbtDag(
      operator_args={"install_deps": True},
      profile_config=profile_config,
      schedule_interval="@daily",
-     start_date=datetime(2025, 7, 31),
+     start_date=datetime(2025, 10, 25),
      catchup=False,
      dag_id="dbt_fabric_dag",
 )
